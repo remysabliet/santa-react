@@ -1,3 +1,28 @@
+
+## Notes to the reviewer
+Glitch does not support a Node version higher than 16, and pnpm is not well-maintained. Initially, I attempted to set up a pnpm monorepo, but Glitch was unable to make it work. As a result, I reverted to a simpler setup to ensure compatibility with Glitch, although I would not choose this approach for a real-life project.
+
+The backend express server is located under /server 
+For the UI side, I have adopted React + Tailwindcss (for the fun)
+The build is under /dist at the root of the project and served from the server
+
+## Get started
+
+```npm install```
+Install all node_modules for root / ui / server
+
+```npm build```
+Build ui into /dist
+
+```npm start```
+Run the server serving ui build from /dist
+
+## Improvement
+ - Make this project a monorepo including packages/server and packages/ui
+ - Have a common tsconfig file to be imported from both packages's tsconfig, keeping their own settings
+ - Setup prettier and 
+
+
 # IMPORTANT! READ before starting
 
 By default for anonymous users (non logged in), your code and app will only remain on glitch.com for 5 days.
