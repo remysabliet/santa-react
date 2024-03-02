@@ -6,7 +6,8 @@
   "scripts": {
     "build": "cd ui && npm run build",
     "start": "cd server && npm run start",
-    "install": "cd ui && npm i && cd ../server && npm i"
+    "install": "cd ui && npm i && cd ../server && npm i",
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "server": "^1.0.38"
@@ -15,7 +16,7 @@
     "vite": "^4.2.1"
   },
   "engines": {
-    "node": "20.x"
+    "node": "16.x"
   },
   "repository": {
     "url": "https://github.com/alj-devops/santa-app"
