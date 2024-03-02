@@ -1,0 +1,23 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+* {
+  box-sizing: border-box;
+}
+
+@layer base {
+  body {
+    @apply m-8 font-base;
+  }
+
+  h1 {
+    @apply my-8 font-bold italic text-3xl text-blue-custom;
+  }
+
+  button,
+  input,
+  textarea {
+    @apply rounded;
+  }
+}
