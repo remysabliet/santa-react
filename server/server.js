@@ -18,7 +18,7 @@ app.use(morgan());
 app.use(express.static("public"));
 
 
-app.use(express.static(path.resolve(__dirname, '../../dist')));
+app.use(express.static(path.resolve(__dirname, '../dist')));
 
 
 // listen for requests :)
