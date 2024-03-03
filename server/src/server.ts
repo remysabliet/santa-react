@@ -9,7 +9,7 @@ import { IError } from "../../types/src/types";
 
 const app = express();
 
-app.use(cors());
+// app.use(cors()); // disable for Glitch
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
