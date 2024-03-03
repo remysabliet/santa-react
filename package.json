@@ -8,8 +8,9 @@
     "build:types": "(cd types && npm run build)",
     "build": "npm run build:types && npm run build:ui",
     "start": "cd server && npm run start",
-    "install": "(cd types && npm i) && (cd ui && npm i) && (cd server && npm i)",
-    "postinstall": "npm run build"
+    "install": "cd server && npm i",
+    "install:local": "(cd types && npm i) && (cd ui && npm i) && (cd server && npm i)",
+    "postinstall:local": "npm run build"
   },
   "dependencies": {
     "server": "^1.0.38"
