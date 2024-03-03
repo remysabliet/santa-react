@@ -1,7 +1,7 @@
 import { IChristmasWish } from "../@types/christmas";
 
 export const createWish = async (wishes: IChristmasWish) => {
-  const response = await fetch("http://localhost:3000/api/christmas/wishes", {
+  const response = await fetch("/api/christmas/wishes", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
