@@ -5,6 +5,6 @@ export default {
   plugins: [reactRefresh()],
   esbuild: {},
   build: {
-    outDir: "../../dist",
+    outDir: "../dist",
   },
 };
