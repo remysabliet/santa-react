@@ -8,7 +8,7 @@ This project was bootstrapped with:
 
 In the project directory, you can run:
 
-```npm build```
+```npm run build```
 Build the assets into /dist/
 
 ```npm start```

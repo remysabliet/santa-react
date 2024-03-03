@@ -1,12 +1,14 @@
 {
-  "name": "santa-app",
+"name": "santa-app",
   "version": "0.0.1",
   "description": "A simple Node app built on Express, instantly up and running.",
   "main": "server.js",
   "scripts": {
-    "build": "cd ui && npm run build",
+    "build:ui": "(cd ui && npm run build)",
+    "build:types": "(cd types && npm run build)",
+    "build": "npm run build:types && npm run build:ui",
     "start": "cd server && npm run start",
-    "install": "cd ui && npm i && cd ../server && npm i",
+    "install": "(cd types && npm i) && (cd ui && npm i) && (cd server && npm i)",
     "postinstall": "npm run build"
   },
   "dependencies": {
