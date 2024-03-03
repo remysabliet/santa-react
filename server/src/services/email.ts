@@ -2,8 +2,6 @@ import nodemailer, { SentMessageInfo } from "nodemailer";
 
 import { IChristmasRequest } from "../types/christmas";
 
-console.log(process.env.ETHEREAL_USERNAME, process.env.ETHEREAL_PASSWORD);
-
 const pendingChristmasRequests: IChristmasRequest[] = [];
 
 // Create a transporter object using the default SMTP transport

@@ -66,7 +66,7 @@ export const sendLetterToSanta = async (req: Request, res: Response, next: NextF
       };
       newChristmasWishRequest(reqPayload);
 
-      return res.status(200).json({ message: "Success" });
+      return res.status(200).json({ message: "The letter has been sent successfully." });
     }
   } catch (error) {
     next(error);

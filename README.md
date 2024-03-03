@@ -1,10 +1,22 @@
 
+# Overview
+This application is a form that allows children to send a letter (in the form of an email, to be eco-friendly) to Santa Claus. 
+Input validation is performed on both the frontend and backend. 
+Success or error messages are displayed according to the success of a request. 
+A batch of letters is sent every 15 seconds from the backend.
+
 ## Notes to the reviewer
 Glitch does not support a Node version higher than 16, and pnpm is not well-maintained. Initially, I attempted to set up a pnpm monorepo, but Glitch was unable to make it work. As a result, I reverted to a simpler setup to ensure compatibility with Glitch, although I would not choose this approach for a real-life project.
 
 The backend express server is located under /server 
 For the UI side, I have adopted React + Tailwindcss (for the fun)
 The build is under /dist at the root of the project and served from the server
+
+My Ethereal username password are defined in a /server/.env
+
+The source code is available on my gitub repository: [santa-react](https://github.com/tailwindlabs/tailwindcss).
+
+Time worked on the project: around 15 hours.
 
 ## Get started
 
@@ -20,7 +32,10 @@ Run the server serving ui build from /dist
 ## Improvement
  - Make this project a monorepo including packages/server and packages/ui
  - Have a common tsconfig file to be imported from both packages's tsconfig, keeping their own settings
- - Setup prettier and 
+ - Setup prettier and eslint
+ - Setup authentication
+ - Leverage husky and github hooks
+ - among others..
 
 
 # IMPORTANT! READ before starting
