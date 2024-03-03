@@ -1,4 +1,5 @@
 {
+  "module": "esnext",
   "compilerOptions": {
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
@@ -7,12 +8,11 @@
     "strict": true,
     "skipLibCheck": true,
     "incremental": true,
-    // "isolatedModules": true,
     "resolveJsonModule": true,
     "types": ["jest"],
-    "baseUrl": "src",
+    "baseUrl": "./",
     "declaration": true,
-    "outDir": "dist",
+    "outDir": "./dist",
     "paths": {
       "*": ["src/*"]
     },
@@ -22,5 +22,6 @@
   "ts-node": {
     "esm": true, // «———— enabling ESM for ts-node,
     "files": true
-  }
+  },
+  "exclude": ["node_modules"]
 }

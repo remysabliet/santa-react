@@ -4,10 +4,12 @@ import cors from "cors";
 import path, { dirname } from "path";
 import { fileURLToPath } from "url";
 
-import { IError } from "../../types/dist";
+import christmasWishesRouter from "./routers/christmasWishes";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import { IError } from "../../types/src/types";
+
+// const __filename = path.resolve();
+// const __dirname = dirname(__filename);
 
 const app = express();
 
@@ -21,6 +23,11 @@ app.use(express.static("public"));
 
 // Serving website assets from the dist folder
 app.use(express.static(path.resolve(__dirname, "../../dist")));
+
+// Christmas wishes
+app.use('/api/christmas/wishes', christmasWishesRouter)
+
+
 
 // Error handler to be located at the end to catch both synchronous and asynchronous error
 app.use((err: IError, req: Request, res: Response, next: NextFunction) => {
