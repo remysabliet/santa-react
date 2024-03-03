@@ -1,7 +1,9 @@
 import * as dotenv from "dotenv";
-import app from "./server";
+import path from "path";
+// .env must be loaded before importing app
+dotenv.config({ path: path.resolve(__dirname, "./.env") });
 
-dotenv.config();
+import app from "./server";
 
 const port = process.env.PORT || 3000;
 
