@@ -8,20 +8,27 @@ A batch of letters is sent every 15 seconds from the backend.
 ## Notes to the reviewer
 Glitch does not support a Node version higher than 16, and pnpm is not well-maintained. Initially, I attempted to set up a pnpm monorepo, but Glitch was unable to make it work. As a result, I reverted to a simpler setup to ensure compatibility with Glitch, although I would not choose this approach for a real-life project.
 
-The backend express server is located under /server 
-For the UI side, I have adopted React + Tailwindcss (for the fun)
-The build is under /dist at the root of the project and served from the server
+There are a total of 3 subrepository: 
+- The **server** located under _/server_ 
+- The **ui** located under _/ui_
+- The **types** including types and typeguards located under _/types_
 
-My Ethereal username password are defined in a /server/.env
+They have their own **README.md** file
+For the backend, I leverage a regular express server
+For the UI side, I have adopted React + Tailwindcss (for the fun)
+
+The build generated from the UI is under /dist at the root of the project and served from the server
+
+My Ethereal username password are defined in /server/.env
 
 The source code is available on my gitub repository: [santa-react](https://github.com/tailwindlabs/tailwindcss).
 
-Time worked on the project: around 15 hours.
+Time worked on the project: around 15 hours. 
 
 ## Get started
 
 ```npm install```
-Install all node_modules for root / ui / server
+Install all node_modules for root / types / ui / server
 
 ```npm build```
 Build ui into /dist
@@ -36,6 +43,9 @@ Run the server serving ui build from /dist
  - Setup authentication
  - Leverage husky and github hooks
  - among others..
+
+
+
 
 
 # IMPORTANT! READ before starting
